@@ -34,3 +34,38 @@ A full-stack AI-powered image generator built with the MERN stack. Users can inp
 ```bash
 git clone https://github.com/your-username/image-generator.git
 cd image-generator
+
+Set up the backend
+cd backend
+npm install
+
+Create a .env file inside the backend folder:
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+OPENAI_API_KEY=your_openai_api_key
+
+Start the backend server:
+npm start
+
+Set up the frontend
+cd ../frontend
+npm install
+npm start
+
+🧪 Future Improvements
+User authentication
+
+Image gallery & likes/comments
+
+Download & share on social media
+
+Dark mode toggle
+
+🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first.
+
+📄 License
+MIT
+
+👨‍💻 Author
+Made with 💻 by Satyam Gautam
