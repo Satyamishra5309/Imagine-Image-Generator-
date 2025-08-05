@@ -1,0 +1,28 @@
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MongoDB_URI=${MongoDB_URI}
+      - PORT=${PORT}
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:      
+
